@@ -30,6 +30,8 @@ Which shows that the aerage-case running time for Randomized quicksort is O(_n_ 
 
 The output of the quick_sort.py file is as follows:
 
+```
+
 Random array with PivotSelection.RANDOM :  0.01711893081665039
 Random array with PivotSelection.DETERMINISTIC :  0.014617204666137695
 Deterministic pivot selection is faster by  2.5017261505126953  milliseconds
@@ -50,6 +52,7 @@ All elements equal array with PivotSelection.RANDOM :  4.925328969955444
 All elements equal array with PivotSelection.DETERMINISTIC :  4.894295930862427
 Deterministic pivot selection is faster by  31.033039093017578  milliseconds
 
+```
 
 As expected, when sorting a random array, the difference in speed between the random and deterministic pivot is marginal: I assume the deterministic pivot is marginally faster simply because generating a random number takes a small amount of time. The same applies to the "repeated elements" array since it is still random, albeit with less variation of elements inside.
 
