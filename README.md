@@ -10,8 +10,5 @@ Consider that when we pick a pivot on an array of size X, we then perform X-1 co
 
 Therefore, we can write a recurrence relation for the expected number of comparisons required:
 
-T(x) = (x - 1) + 1/n \* Σ
+T(x) = (x - 1) + 1/x * $$\ \sum_{i=0}^{x-1} T(i) + T(x-i-1)  $$
 
-```text
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-```
