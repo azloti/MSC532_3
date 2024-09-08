@@ -1,6 +1,7 @@
 import hashlib
 
 def stable_hash(x):
+    # This function returns a stable hash value for a given string
     return int(hashlib.md5(x.encode('utf8')).hexdigest(),16)
 
 # A Node class to represent the elements in the hash table
@@ -67,16 +68,6 @@ class HashTable:
             prev = current_node
             current_node = current_node.next
 
-    def display(self):
-        print("\nHash Table:")
-        for i in range(self.size):
-            print(f"Index {i}: ", end="")
-            current_node = self.table[i]
-            while current_node is not None:
-                print(f"({current_node.key}, {current_node.value})", end=" -> ")
-                current_node = current_node.next
-            print("None")
-
 # Example usage
 hash_table = HashTable(10)
 hash_table.insert("nichita", "CS")
@@ -84,4 +75,14 @@ hash_table.insert("diana", "Law")
 hash_table.insert("cristi", "Management")
 hash_table.insert("nastia", "Math")
 
-hash_table.display()
+def show(table):
+    print("\nHash Table:")
+    for i in range(table.size):
+        print(f"Index {i}: ", end="")
+        current_node = table.table[i]
+        while current_node is not None:
+            print(f"({current_node.key}, {current_node.value})", end=" -> ")
+            current_node = current_node.next
+        print("None")
+
+show(hash_table)
